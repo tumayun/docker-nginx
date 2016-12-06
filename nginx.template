@@ -1,0 +1,26 @@
+server {
+  listen 80;
+
+  server_name ${SERVER_NAME};
+  root /var/www/public;
+
+  location / {
+    try_files ${DOLLAR}uri /index.html;
+  }
+
+  location = /privacy {
+    break;
+  }
+
+  location = /privacy.html {
+    break;
+  }
+
+  location = /robots.txt {
+    break;
+  }
+
+  location /.well-known/acme-challenge/ {
+    break;
+  }
+}
