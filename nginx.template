@@ -9,6 +9,8 @@ server {
   }
 
   location = /privacy {
+    alias /var/www/public/privacy.html;
+    add_header Content-Type text/html;
     break;
   }
 
