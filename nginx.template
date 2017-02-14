@@ -8,23 +8,7 @@ server {
     try_files ${DOLLAR}uri /${DOLLAR}host/index.html;
   }
 
-  location = /privacy {
-    alias /var/www/public/${DOLLAR}host/privacy.html;
-    add_header Content-Type text/html;
-    break;
-  }
-
-  location = /privacy.html {
-    alias /var/www/public/${DOLLAR}host/privacy.html;
-    add_header Content-Type text/html;
-    break;
-  }
-
   location = /robots.txt {
-    break;
-  }
-
-  location /.well-known/acme-challenge/ {
     break;
   }
 }
