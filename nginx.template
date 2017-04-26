@@ -1,3 +1,7 @@
+types {
+  application/pkcs7-mime p7c;
+}
+
 server {
   listen 80;
 
