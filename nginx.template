@@ -13,7 +13,7 @@ server {
   }
 
   location = /apple-app-site-association {
-    default_type application/json;
+    default_type application/pkcs7-mime;
     rewrite ^/apple-app-site-association$ /${DOLLAR}host/apple-app-site-association;
   }
 }
