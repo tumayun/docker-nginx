@@ -1,6 +1,5 @@
 FROM nginx
-COPY nginx.template /etc/nginx/conf.d/nginx.template
+COPY space.conf /etc/nginx/conf.d/space.conf
 
-ENV DOLLAR='$'
 EXPOSE 80
-CMD /bin/bash -c "envsubst < /etc/nginx/conf.d/nginx.template > /etc/nginx/conf.d/default.conf && nginx -g 'daemon off;'"
+CMD /bin/bash -c "nginx -g 'daemon off;'"
